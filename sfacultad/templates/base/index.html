@@ -1,0 +1,48 @@
+{% extends "base/base_generic.html" %}
+
+{% block content %}
+
+        <!-- About section-->
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Datos</h2>
+                        <p class="lead">Los usuarios registrados son los siguientes:</p>
+                        <ul>
+                            <li>AdminUser: alfonso</li>
+                            <li>PasswordAdmin: gz0cf5JGA </li>
+                            <li>User: william </li>
+                            <li>Password: ti2uPUVRW0OjjD5 </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="bg-light" id="services">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Comentarios </h2>
+                        <p class="lead">La parte de validación IP no se encuentra disponible debido a que los datos son recolectados mediante un FORMS.PY es decir se manda los datos directos de la base de datos y un Views los recibe para poder guardarlos, en ningún momento se puede interactuar con esa información que se esta enviando. </p><br>
+                        <p class="lead">Para poder acceder a cualquier pestaña es necesario que este LOGGEADO porque en automático no aparecerá ninguna pestaña de las funciones en el NAVBAR hasta que usted se logge con algún usuario, al hacer loggout estas desaparecerán en automático. </p>
+
+                            
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section-->
+        <section id="contact">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Creador</h2>
+                        <p class="lead">Alfonso Garcia Salas </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

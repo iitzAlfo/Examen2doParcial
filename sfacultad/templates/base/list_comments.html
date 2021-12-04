@@ -1,0 +1,32 @@
+{% extends "base/base_generic.html" %}
+
+{% block content %}
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Matricula</td>
+            <td>Aula</td>
+            <td>Numero de PC</td>
+            <td>IP de PC</td>
+            <td>Comentario</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% if comentarios %}
+        {% for comentario in comentarios %}
+        <tr>
+            <td>{{comentario.matricula}}</td>
+            <td>{{comentario.aula}}</td>
+            <td>{{comentario.num}}</td>
+            <td>{{comentario.ip_disp}}</td>
+            <td>{{comentario.comment}}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <h4> No hay registros </h4>
+        {% endif %}
+    </tbody>
+
+</table>
+{% endblock %}

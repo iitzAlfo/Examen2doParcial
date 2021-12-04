@@ -1,0 +1,36 @@
+{% extends "base/base_generic.html" %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <body>
+    <br>
+        <section class="d-flex justify-content-center">
+            <div class="card col-sm-6 p-3">
+                <div class="mb-3">
+                    <h4>Comentarios</h4>
+                </div>
+                <div class="mb-1">
+                    <form action="" method="post">
+                        {% csrf_token %}  
+                        {{ form | crispy }}
+                        <br>
+                        {% if user.is_authenticated %}
+                        <div class="mb-2">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                        {% else %}
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+{% block javascript %}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{% static '/js/ip.js' %}"></script>
+
+{% endblock %}
+
+{% endblock %}
